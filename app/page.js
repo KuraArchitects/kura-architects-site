@@ -42,7 +42,7 @@ return ( <main className="min-h-screen bg-white text-gray-800 font-sans">
     >
       <h2 className="text-3xl font-semibold mb-6">About Kura Architects</h2>
       <p className="max-w-3xl mx-auto text-lg">
-        Kura Architects is a architecture studio focused on thoughtful, value-driven design.  We specialise in designing residential, workplaces education and community spaces that add value for their users whilst  guiding clients through every RIBA stage. Whether it's a contemporary extension, listed refurbishment, or workspace retrofit, we bring clarity, cost-awareness and care to every step.
+        Kura Architects is a studio focused on thoughtful, value-driven design.  We specialise in designing residential, workplaces education and community spaces that add value for their users whilst  guiding clients through every RIBA stage. Whether it's a contemporary extension, listed refurbishment, or workspace retrofit, we bring clarity, cost-awareness and care to every step.
       </p>
     </motion.div>
   </section>
