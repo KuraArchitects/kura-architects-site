@@ -120,8 +120,6 @@ export default function Page() {
                 <Image
                   src={["/Projects/Project1a.jpg", "/Projects/Project1b.jpg", "/Projects/Project1c.jpg", "/Projects/Project1d.jpg"][currentSlide1]}
                   alt="Sir Harry's"
-                  layout="fill"
-                  objectFit="cover"
                   layout="intrinsic"
                   width={600}
                   height={400}
@@ -145,8 +143,6 @@ export default function Page() {
                 <Image
                   src={["Projects/Project2a.jpg", "/Projects/Project2b.jpg", "/Projects/Project2c.jpg", "/Projects/Project2d.jpg"][currentSlide2]}
                   alt="The Old Coach House"
-                  layout="fill"
-                  objectFit="cover"
                   layout="intrinsic"
                   width={600}
                   height={400}
