@@ -47,8 +47,8 @@ export default function Page() {
             <motion.span
               key={i}
               variants={{
-                hidden: { opacity: 0, y: 2 },
-                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
               }}
               transition={{ duration: 1.5 }}
             >
@@ -60,7 +60,7 @@ export default function Page() {
           className="text-lg md:text-xl max-w-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 4 , duration: 1.5 }}
         >
           Guiding clients through every stage of their project - from RIBA Stage 0 strategic brief to Stage 6 handover - with clarity, rigour and attention to detail.
         </motion.p>
