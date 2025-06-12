@@ -80,7 +80,7 @@ export default function Page() {
             },
             {
               title: "Principal Designer Duties",
-              desc: "We fulfil your statutory duties under CDM 2015 and the Building Safety Act 2022, helping you demonstrate a clear golden thread."
+              desc: "As RIBA Registered Principal Designers, we support you to fulfil your statutory duties as Client for CDM 2015 and the Building Safety Act 2022."
             },
             {
               title: "Extensions & Refurbishments",
