@@ -35,7 +35,7 @@ export default function Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Thoughtful | Smart | Reliable
+          Thoughtful   |   Smart   |   Reliable
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl max-w-2xl"
@@ -43,7 +43,7 @@ export default function Page() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Guiding clients through every stage of their project | From strategic brief to handover | With clarity, rigour and attention to detail.
+          Guiding clients through every stage of their project, from strategic brief to handover, with clarity, rigour and attention to detail.
         </motion.p>
       </section>
 
