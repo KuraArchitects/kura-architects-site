@@ -116,9 +116,9 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Project 1: Sir Harry's */}
             <div className="shadow-md rounded-xl overflow-hidden">
-              <div className="relative group">
+              <div className="relative group bg-gray-200">
                 <Image
-                  src={["/Projects/Project1a.jpg", "/Projects/Project1b.jpg", "/Projects/Project1c.jpg", "/Projects/Project1d.jpg"][currentSlide1]}
+                  src={["Projects/Project1a.jpg", "/Projects/Project1b.jpg", "/Projects/Project1c.jpg", "/Projects/Project1d.jpg"][currentSlide1]}
                   alt="Sir Harry's"
                   layout="intrinsic"
                   width={600}
@@ -129,6 +129,17 @@ export default function Page() {
                   <button onClick={() => setCurrentSlide1((prev) => (prev + 1) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❯</button>
                 </div>
               </div>
+              <div className="p-4 text-left">
+                <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
+                <p className="text-sm text-gray-600">...</p>
+              </div>
+            </div>
+  <div className="p-4 text-left">
+    <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
+    <p className="text-sm text-gray-600">...</p>
+  </div>
+</div>
+            
               <div className="p-4 text-left">
                 <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
                 <p className="text-sm text-gray-600">
