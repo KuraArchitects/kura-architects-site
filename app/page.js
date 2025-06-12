@@ -47,7 +47,7 @@ export default function Page() {
             <motion.span
               key={i}
               variants={{
-                hidden: { opacity: 0, y: 20 },
+                hidden: { opacity: 0, y: 2 },
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 1.5 }}
