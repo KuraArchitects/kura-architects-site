@@ -18,7 +18,7 @@ export default function Page() {
 
       {/* Header */}
       <header className="flex items-center justify-between p-6 bg-[#7994a0]">
-        <Image src="/Logo.png" alt="Kura Architects" width={220} height={60} />
+        <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
         <nav className="space-x-6 text-white text-lg">
           <a href="#about" className="hover:underline">About</a>
           <a href="#services" className="hover:underline">Services</a>
@@ -122,6 +122,9 @@ export default function Page() {
                   alt="Sir Harry's"
                   layout="fill"
                   objectFit="cover"
+                  layout="intrinsic"
+                  width={600}
+                  height={400}
                 />
                 <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button onClick={() => setCurrentSlide1((prev) => (prev - 1 + 4) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❮</button>
@@ -144,6 +147,9 @@ export default function Page() {
                   alt="The Old Coach House"
                   layout="fill"
                   objectFit="cover"
+                  layout="intrinsic"
+                  width={600}
+                  height={400}
                 />
                 <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button onClick={() => setCurrentSlide2((prev) => (prev - 1 + 4) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❮</button>
