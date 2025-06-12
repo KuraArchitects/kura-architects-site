@@ -38,7 +38,7 @@ export default function Page() {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 1 // Adjust delay between words
+                staggerChildren: 1
               }
             }
           }}
@@ -58,6 +58,7 @@ export default function Page() {
             </motion.span>
           ))}
         </motion.h1>
+        <motion.p
           className="text-lg md:text-xl max-w-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -134,15 +135,19 @@ export default function Page() {
         >
           <h2 className="text-3xl font-semibold mb-10">Selected Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Project 1: Sir Harry's */}
+            {/* Project 1 */}
             <div className="shadow-md rounded-xl overflow-hidden">
-              <div className="relative group bg-gray-200">
+              <div className="aspect-[3/2] bg-gray-200 relative group">
                 <Image
-                  src={["Projects/Project1a.jpg", "/Projects/Project1b.jpg", "/Projects/Project1c.jpg", "/Projects/Project1d.jpg"][currentSlide1]}
+                  src={[
+                    "/Projects/Project1a.jpg",
+                    "/Projects/Project1b.jpg",
+                    "/Projects/Project1c.jpg",
+                    "/Projects/Project1d.jpg"
+                  ][currentSlide1]}
                   alt="Sir Harry's"
-                  layout="intrinsic"
-                  width={600}
-                  height={400}
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button onClick={() => setCurrentSlide1((prev) => (prev - 1 + 4) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❮</button>
@@ -151,32 +156,24 @@ export default function Page() {
               </div>
               <div className="p-4 text-left">
                 <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
-                <p className="text-sm text-gray-600">&hellip;</p>
-              </div>
-            </div>
-  <div className="p-4 text-left">
-    <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
-    <p className="text-sm text-gray-600">&hellip;</p>
-  </div>
-</div>
-            
-              <div className="p-4 text-left">
-                <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
                 <p className="text-sm text-gray-600">
                   A sensitive contemporary extension to a listed building in leafy Edgbaston, providing improved space for kitchen, dining and living.
                 </p>
               </div>
             </div>
-
-            {/* Project 2: The Old Coach House */}
+            {/* Project 2 */}
             <div className="shadow-md rounded-xl overflow-hidden">
-              <div className="relative group">
+              <div className="aspect-[3/2] bg-gray-200 relative group">
                 <Image
-                  src={["Projects/Project2a.jpg", "/Projects/Project2b.jpg", "/Projects/Project2c.jpg", "/Projects/Project2d.jpg"][currentSlide2]}
+                  src={[
+                    "/Projects/Project2a.jpg",
+                    "/Projects/Project2b.jpg",
+                    "/Projects/Project2c.jpg",
+                    "/Projects/Project2d.jpg"
+                  ][currentSlide2]}
                   alt="The Old Coach House"
-                  layout="intrinsic"
-                  width={600}
-                  height={400}
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button onClick={() => setCurrentSlide2((prev) => (prev - 1 + 4) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❮</button>
@@ -202,9 +199,15 @@ export default function Page() {
           transition={{ duration: 1 }}
         >
           <h2 className="text-3xl font-semibold mb-6">Contact Us</h2>
-          <p className="text-lg">Email: <a href="mailto:mail@kura-architects.co.uk" className="text-[#7994a0] underline">mail@kura-architects.co.uk</a></p>
-          <p className="text-lg">Phone: <a href="tel:+447811331210" className="text-[#7994a0] underline">+44 (0)78 11 33 12 10</a></p>
-          <p className="text-lg">Studio Address: Rowans | Wellington Road | B15 2ES</p>
+          <p className="text-lg">
+            Email: <a href="mailto:mail@kura-architects.co.uk" className="text-[#7994a0] underline">mail@kura-architects.co.uk</a>
+          </p>
+          <p className="text-lg">
+            Phone: <a href="tel:+447811331210" className="text-[#7994a0] underline">+44 (0)78 11 33 12 10</a>
+          </p>
+          <p className="text-lg">
+            Studio Address: Rowans  |  Wellington Road  |  B15 2ES
+          </p>
         </motion.div>
       </section>
 
