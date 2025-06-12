@@ -17,14 +17,16 @@ export default function Page() {
     <main className="min-h-screen bg-white text-gray-800 font-sans">
 
       {/* Header */}
-      <header className="flex items-center justify-between p-6 bg-[#7994a0]">
-        <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
-        <nav className="space-x-6 text-white text-lg">
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#services" className="hover:underline">Services</a>
-          <a href="#projects" className="hover:underline">Projects</a>
-          <a href="#contact" className="hover:underline">Contact</a>
-        </nav>
+      <header className="p-6 bg-[#7994a0] text-white">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-between">
+          <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
+          <nav className="mt-4 sm:mt-0 space-x-6 text-lg text-center sm:text-right">
+            <a href="#about" className="hover:underline">About</a>
+            <a href="#services" className="hover:underline">Services</a>
+            <a href="#projects" className="hover:underline">Projects</a>
+            <a href="#contact" className="hover:underline">Contact</a>
+          </nav>
+        </div>
       </header>
 
       {/* Hero Section */}
