@@ -38,19 +38,19 @@ export default function Page() {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.8,
+                staggerChildren: 1.5,
               },
             },
           }}
         >
-          {["Thoughtful", "|", "Smart", "|", "Reliable"].map((word, i) => (
+          {["Thoughtful  ", "|  Smart  ", "|  Reliable"].map((word, i) => (
             <motion.span
               key={i}
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.5 }}
             >
               {word}
             </motion.span>
