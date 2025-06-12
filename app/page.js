@@ -30,7 +30,7 @@ export default function Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Thoughtful   |   Smart   |   Reliable
+          Thoughtful      |      Smart      |      Reliable
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl max-w-2xl"
@@ -68,12 +68,12 @@ export default function Page() {
             {[1, 2].map((idx) => (
           <div key={idx} className="shadow-md rounded-xl overflow-hidden">
           <div className="h-64 bg-gray-300 flex items-center justify-center">
-           <span className="text-gray-600 text-lg">Project Image {idx}</span>
+           <span className="text-gray-600 text-lg">Sir Harry's {idx}</span>
           </div>
           <div className="p-4 text-left">
-          <h3 className="text-xl font-medium mb-2">Project Title {idx}</h3>
+          <h3 className="text-xl font-medium mb-2">The Old Coach House {idx}</h3>
           <p className="text-sm text-gray-600">
-            A short description of Project {idx}, explaining what was delivered and the value added for the client.
+            Residential Refurbishment {idx}, contemporary extension to existing listed property.
           </p>
           </div>
           </div>
