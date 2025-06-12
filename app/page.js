@@ -6,16 +6,24 @@ import Image from "next/image";
 
 export default function Page() {
 useEffect(() => {
+const [currentSlide1, setCurrentSlide1] = useState(0);
+const [currentSlide2, setCurrentSlide2] = useState(0);
 document.title = "Kura Architects | Chartered Architects";
-}, \[]);
+}, []);  // ← Remove the backslash
 
-const \[currentSlide, setCurrentSlide] = useState(0);
-const projectImages = \[
-"/projects/project1a.jpg",
-"/projects/project1b.jpg",
-"/projects/project2a.jpg",
-"/projects/project2b.jpg"
+const [currentSlide, setCurrentSlide] = useState(0);
+
+const projectImages = [
+  "/projects/project1a.jpg",
+  "/projects/project1b.jpg",
+  "/projects/project1c.jpg",
+  "/projects/project1d.jpg",
+  "/projects/project2a.jpg",
+  "/projects/project2b.jpg",
+  "/projects/project2c.jpg",
+  "/projects/project2d.jpg"
 ];
+
 
 const handleNext = () => {
 setCurrentSlide((prev) => (prev + 1) % projectImages.length);
