@@ -61,6 +61,50 @@ export default function Page() {
         </motion.div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="px-6 py-16 bg-gray-50 text-center">
+        <h2 className="text-3xl font-semibold mb-10">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          {[
+            {
+              title: "Planning Applications",
+              desc: "We prepare drawings, planning statements and coordinate specialist input to secure approvals — including conservation and listed consents."
+            },
+            {
+              title: "Technical Drawings",
+              desc: "We produce accurate, coordinated construction drawings and 3D models to support procurement, costing and on-site delivery."
+            },
+            {
+              title: "Contract Administration",
+              desc: "We manage the contract between you and the builder, chair meetings, assess progress, and issue certificates with rigour and fairness."
+            },
+            {
+              title: "Principal Designer Duties",
+              desc: "We fulfil your statutory duties under CDM 2015 and the Building Safety Act 2022, helping you demonstrate a clear golden thread."
+            },
+            {
+              title: "Extensions & Refurbishments",
+              desc: "We design elegant, cost-effective alterations that maximise space, daylight and function while respecting context and budget."
+            },
+            {
+              title: "Listed Building Works",
+              desc: "We navigate heritage constraints sensitively — preparing Heritage Statements, liaising with officers and safeguarding significance."
+            }
+          ].map((service, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white shadow-md rounded-2xl p-6 text-left"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+            >
+              <h3 className="text-xl font-medium mb-2">{service.title}</h3>
+              <p className="text-sm text-gray-600">{service.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="px-6 py-16 bg-white text-center">
         <motion.div
@@ -70,7 +114,6 @@ export default function Page() {
         >
           <h2 className="text-3xl font-semibold mb-10">Selected Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-
             {/* Project 1: Sir Harry's */}
             <div className="shadow-md rounded-xl overflow-hidden">
               <div className="h-64 bg-gray-200 relative group">
@@ -136,7 +179,6 @@ export default function Page() {
       <footer className="p-6 bg-[#7994a0] text-white text-center text-sm">
         &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
       </footer>
-
     </main>
   );
 }
