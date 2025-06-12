@@ -13,12 +13,8 @@ const \[currentSlide, setCurrentSlide] = useState(0);
 const projectImages = \[
 "/projects/project1a.jpg",
 "/projects/project1b.jpg",
-"/projects/project1c.jpg",
-"/projects/project1d.jpg",
 "/projects/project2a.jpg",
-"/projects/project2b.jpg",
-"/projects/project2c.jpg",
-"/projects/project2d.jpg"
+"/projects/project2b.jpg"
 ];
 
 const handleNext = () => {
@@ -89,35 +85,53 @@ return ( <main className="min-h-screen bg-white text-gray-800 font-sans">
     >
       <h2 className="text-3xl font-semibold mb-10">Selected Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        {[{
-          title: "Sir Harry's",
-          desc: "A sensitive contemporary extension to a listed building in leafy Edgbaston, providing improved space for kitchen, dining and living."
-        }, {
-          title: "The Old Coach House",
-          desc: "A complete refurbishment and extension to an existing coach house. The design maximises light and space, rearranging the site layout to optimise flow and function."
-        }].map((project, index) => (
-          <div key={index} className="shadow-md rounded-xl overflow-hidden">
-            <div className="h-64 bg-gray-200 relative group">
-              <Image
-                src={projectImages[currentSlide]}
-                alt={`Image of ${project.title}`}
-                layout="fill"
-                objectFit="cover"
-              />
-              <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <button onClick={handlePrev} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❮</button>
-                <button onClick={handleNext} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❯</button>
-              </div>
-            </div>
-            <div className="p-4 text-left">
-              <h3 className="text-xl font-medium mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-600">{project.desc}</p>
+
+        {/* Project 1: Sir Harry's */}
+        <div className="shadow-md rounded-xl overflow-hidden">
+          <div className="h-64 bg-gray-200 relative group">
+            <Image
+             src={["/projects/project1a.jpg", "/projects/project1b.jpg", "/projects/project1c.jpg", "/projects/project1d.jpg"][currentSlide1]}
+             alt="Sir Harry's"
+             layout="fill"
+             objectFit="cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <button onClick={() => setCurrentSlide1((prev) => (prev - 1 + 4) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❮</button>
+              <button onClick={() => setCurrentSlide1((prev) => (prev + 1) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❯</button>
             </div>
           </div>
-        ))}
+          <div className="p-4 text-left">
+            <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
+            <p className="text-sm text-gray-600">
+             A sensitive contemporary extension to a listed building in leafy Edgbaston, providing improved space for kitchen, dining and living.
+            </p>
+          </div>
+        </div>
+
+       {/* Project 2: The Old Coach House */}
+        <div className="shadow-md rounded-xl overflow-hidden">
+          <div className="h-64 bg-gray-200 relative group">
+            <Image
+             src={["/projects/project2a.jpg", "/projects/project2b.jpg", "/projects/project2c.jpg", "/projects/project2d.jpg"][currentSlide2]}
+             alt="The Old Coach House"
+             layout="fill"
+             objectFit="cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
+             <button onClick={() => setCurrentSlide2((prev) => (prev - 1 + 4) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❮</button>
+             <button onClick={() => setCurrentSlide2((prev) => (prev + 1) % 4)} className="text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full">❯</button>
+            </div>
+          </div>
+          <div className="p-4 text-left">
+           <h3 className="text-xl font-medium mb-2">The Old Coach House</h3>
+           <p className="text-sm text-gray-600">
+             A complete refurbishment and extension to an existing coach house. The design maximises light and space, rearranging the site layout to optimise flow and function.
+           </p>
+          </div>
+        </div>
       </div>
-    </motion.div>
-  </section>
+     </motion.div>
+   </section>
 
   {/* Contact Section */}
   ...
