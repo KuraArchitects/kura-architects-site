@@ -118,7 +118,7 @@ export default function Page() {
             <div className="shadow-md rounded-xl overflow-hidden">
               <div className="h-64 bg-gray-200 relative group">
                 <Image
-                  src={["/projects/Project1a.jpg", "/projects/Project1b.jpg", "/projects/Project1c.jpg", "/projects/Project1d.jpg"][currentSlide1]}
+                  src={["/projects/project1a.jpg", "/projects/project1b.jpg", "/projects/project1c.jpg", "/projects/project1d.jpg"][currentSlide1]}
                   alt="Sir Harry's"
                   layout="fill"
                   objectFit="cover"
@@ -140,7 +140,7 @@ export default function Page() {
             <div className="shadow-md rounded-xl overflow-hidden">
               <div className="h-64 bg-gray-200 relative group">
                 <Image
-                  src={["/projects/Project2a.jpg", "/projects/Project2b.jpg", "/projects/Project2c.jpg", "/projects/Project2d.jpg"][currentSlide2]}
+                  src={["/projects/project2a.jpg", "/projects/project2b.jpg", "/projects/project2c.jpg", "/projects/project2d.jpg"][currentSlide2]}
                   alt="The Old Coach House"
                   layout="fill"
                   objectFit="cover"
