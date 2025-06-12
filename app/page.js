@@ -116,7 +116,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Project 1: Sir Harry's */}
             <div className="shadow-md rounded-xl overflow-hidden">
-              <div className="h-64 bg-gray-200 relative group">
+              <div className="relative group">
                 <Image
                   src={["/Projects/Project1a.jpg", "/Projects/Project1b.jpg", "/Projects/Project1c.jpg", "/Projects/Project1d.jpg"][currentSlide1]}
                   alt="Sir Harry's"
@@ -139,7 +139,7 @@ export default function Page() {
 
             {/* Project 2: The Old Coach House */}
             <div className="shadow-md rounded-xl overflow-hidden">
-              <div className="h-64 bg-gray-200 relative group">
+              <div className="relative group">
                 <Image
                   src={["Projects/Project2a.jpg", "/Projects/Project2b.jpg", "/Projects/Project2c.jpg", "/Projects/Project2d.jpg"][currentSlide2]}
                   alt="The Old Coach House"
