@@ -38,7 +38,7 @@ export default function Page() {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 1  // ⏱ Adjust delay between words here
+                staggerChildren: 1 // Adjust delay between words
               }
             }
           }}
@@ -50,6 +50,8 @@ export default function Page() {
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 }
               }}
+              initial="hidden"
+              animate="visible"
               transition={{ duration: 0.8 }}
             >
               {word}
