@@ -151,12 +151,12 @@ export default function Page() {
               </div>
               <div className="p-4 text-left">
                 <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
-                <p className="text-sm text-gray-600">...</p>
+                <p className="text-sm text-gray-600">&hellip;</p>
               </div>
             </div>
   <div className="p-4 text-left">
     <h3 className="text-xl font-medium mb-2">Sir Harry's</h3>
-    <p className="text-sm text-gray-600">...</p>
+    <p className="text-sm text-gray-600">&hellip;</p>
   </div>
 </div>
             
