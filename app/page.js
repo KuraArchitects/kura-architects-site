@@ -12,9 +12,7 @@ document.title = "Kura Architects | Chartered Architects";
 const [currentSlide1, setCurrentSlide1] = useState(0);
 const [currentSlide2, setCurrentSlide2] = useState(0);
 
-return ( <main className="min-h-screen bg-white text-gray-800 font-sans">
-
-```
+return (
   {/* Header */}
   <header className="flex items-center justify-between p-6 bg-[#7994a0]">
     <Image src="/Logo.png" alt="Kura Architects" width={220} height={60} />
@@ -137,3 +135,5 @@ return ( <main className="min-h-screen bg-white text-gray-800 font-sans">
   </footer>
 
 </main>
+);
+}
