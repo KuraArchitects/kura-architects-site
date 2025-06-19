@@ -31,7 +31,7 @@ export default function Page() {
       {/* Main Content */}
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="h-[85vh] flex flex-col justify-center items-center bg-gray-100 text-center">
+        <section className="flex-grow flex flex-col justify-center items-center bg-gray-100 text-center">
           <motion.div
             className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-8"
             initial="hidden"
@@ -51,7 +51,7 @@ export default function Page() {
                   hidden: { opacity: 0 },
                   visible: { opacity: 1 }
                 }}
-                transition={{ duration: 1.8 }}
+                transition={{ duration: 1.2 }}
               >
                 {word}
               </motion.span>
@@ -61,7 +61,7 @@ export default function Page() {
             className="text-lg md:text-xl max-w-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 4.0, duration: 1 }}
           >
             Guiding clients through every stage of their project, from strategic brief to handover, with clarity, rigour and attention to detail.
           </motion.p>
