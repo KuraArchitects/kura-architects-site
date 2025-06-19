@@ -40,7 +40,7 @@ export default function Page() {
             },
           }}
         >
-          {["Thoughtful   ", "|", "   Smart   ", "|", "   Reliable"].map((word, i) => (
+          {["Thoughtful", "|", "Smart", "|", "Reliable"].map((word, i) => (
             <motion.span
               key={i}
               variants={{
