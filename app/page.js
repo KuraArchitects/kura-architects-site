@@ -29,8 +29,8 @@ export default function Page() {
       </header>
 
       {/* Main */}
-      <main className="flex-grow">
-        <section className="flex flex-col justify-center items-center h-[calc(100vh-160px)] bg-gray-100 text-center">
+      <main className="min-h-screen">
+        <section className="flex flex-col justify-center items-center h-[calc(100vh-148px)] bg-gray-100 text-center">
           <motion.div
             className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-8"
             initial="hidden"
