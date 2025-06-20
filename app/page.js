@@ -29,8 +29,8 @@ export default function Page() {
       </header>
 
       {/* Main */}
-      <main className="flex-grow">
-        <section className="flex flex-col justify-center items-center bg-gray-100 text-center h-[calc(100vh-160px)]">
+      <main className="flex-grow flex items-center justify-center bg-gray-100 text-center">
+        <div>
           <motion.div
             className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-8"
             initial="hidden"
@@ -50,25 +50,25 @@ export default function Page() {
                   hidden: { opacity: 0 },
                   visible: { opacity: 1 }
                 }}
-                transition={{ duration: 1.2 }}
+                transition={{ duration: 1.8 }}
               >
                 {word}
               </motion.span>
             ))}
           </motion.div>
           <motion.p
-            className="text-lg md:text-xl max-w-2xl"
+            className="text-lg md:text-xl max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 3.6, duration: 1 }}
           >
             Guiding clients through every stage of their project, from strategic brief to handover, with clarity, rigour and attention to detail.
           </motion.p>
-        </section>
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="p-6 bg-[#7994a0] text-white text-center text-sm">
+      <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
         &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
       </footer>
     </div>
