@@ -30,9 +30,9 @@ export default function Page() {
 
       {/* Main */}
       <main className="min-h-screen">
-        <section className="flex flex-col justify-center items-center h-[calc(100vh-148px)] bg-gray-100 text-center">
+        <section className="<section className="flex-grow flex flex-col justify-center items-center bg-gray-100 text-cenre ">
           <motion.div
-            className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-8"
+            className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-8 "
             initial="hidden"
             animate="visible"
             variants={{
@@ -43,7 +43,7 @@ export default function Page() {
               },
             }}
           >
-            {["Thoughtful", "Smart", "Reliable"].map((word, i) => (
+            {["Thoughtful   .", "Smart   .", "Reliable"].map((word, i) => (
               <motion.span
                 key={i}
                 variants={{
@@ -60,7 +60,7 @@ export default function Page() {
             className="text-lg md:text-xl max-w-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 1 }}
+            transition={{ delay: 4.8, duration: 1 }}
           >
             Guiding clients through every stage of their project, from strategic brief to handover, with clarity, rigour and attention to detail.
           </motion.p>
