@@ -50,7 +50,7 @@ export default function Page() {
                   hidden: { opacity: 0 },
                   visible: { opacity: 1 }
                 }}
-                transition={{ duration: 1.8 }}
+                transition={{ duration: 1.5 }}
               >
                 {word}
               </motion.span>
@@ -60,9 +60,9 @@ export default function Page() {
             className="text-lg md:text-xl max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3.6, duration: 1 }}
+            transition={{ delay: 5, duration: 1 }}
           >
-            Guiding clients through every stage of their project, from strategic brief to handover, with clarity, rigour and attention to detail.
+            Guiding clients through every stage of their project with clarity, rigour and attention to detail.
           </motion.p>
         </div>
       </main>
