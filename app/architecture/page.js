@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Page() {
   useEffect(() => {
-    document.title = "Contact | Kura Architects";
+    document.title = "Architecture | Kura Architects";
   }, []);
 
   return (
@@ -29,7 +29,7 @@ export default function Page() {
 
       {{/* Main */}}
       <main className="flex-grow flex flex-col items-center justify-center text-center px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Contact</h1>
+        <h1 className="text-4xl font-bold mb-4">Architecture</h1>
         <p className="text-lg text-gray-600">
           This section is currently being updated. Please check back soon or{" "}
           <Link href="/contact" className="text-[#7994a0] underline">get in touch</Link> for more information.

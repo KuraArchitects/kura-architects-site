@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProjectsPage() {
+export default function Page() {
   useEffect(() => {
     document.title = "Projects | Kura Architects";
   }, []);
@@ -30,12 +30,15 @@ export default function ProjectsPage() {
       {{/* Main */}}
       <main className="flex-grow flex flex-col items-center justify-center text-center px-4 py-16">
         <h1 className="text-4xl font-bold mb-4">Projects</h1>
-        <p className="text-lg text-gray-600">This section is currently being updated. Please check back soon or <Link href="/contact" className="text-[#7994a0] underline">get in touch</Link> for more information.</p>
+        <p className="text-lg text-gray-600">
+          This section is currently being updated. Please check back soon or{" "}
+          <Link href="/contact" className="text-[#7994a0] underline">get in touch</Link> for more information.
+        </p>
       </main>
 
       {{/* Footer */}}
       <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
-        &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
+        &copy; {{new Date().getFullYear()}} Kura Architects Ltd. All rights reserved.
       </footer>
     </div>
   );
