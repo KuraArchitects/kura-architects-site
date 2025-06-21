@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800 font-sans">
 
-      {{/* Header */}}
+      {/* Header */}
       <header className="p-6 bg-[#7994a0] text-white">
         <div className="flex flex-col items-center sm:flex-row sm:justify-between">
           <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
@@ -27,13 +27,16 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {{/* Main */}}
+      {/* Main */}
       <main className="flex-grow flex flex-col items-center justify-center text-center px-4 py-16">
         <h1 className="text-4xl font-bold mb-4">About</h1>
-        <p className="text-lg text-gray-600">This section is currently being updated. Please check back soon or <Link href="/contact" className="text-[#7994a0] underline">get in touch</Link> for more information.</p>
+        <p className="text-lg text-gray-600">
+          This section is currently being updated. Please check back soon or{" "}
+          <Link href="/contact" className="text-[#7994a0] underline">get in touch</Link> for more information.
+        </p>
       </main>
 
-      {{/* Footer */}}
+      {/* Footer */}
       <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
         &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
       </footer>
