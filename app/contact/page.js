@@ -1,85 +1,55 @@
 'use client';
 
-import { useEffect } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function ContactPage() {
-  useEffect(() => {
-    document.title = "Contact | Kura Architects";
-  }, []);
-
   return (
-    <main className="min-h-screen bg-white text-gray-800 font-sans">
+    <div className="flex flex-col min-h-screen bg-white text-gray-800 font-sans">
 
       {/* Header */}
-      <header className="p-6 bg-[#7994a0] text-white">
-        <div className="flex flex-col items-center sm:flex-row sm:justify-between">
-          <Link href="/">
-            <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
-          </Link>
-          <nav className="mt-4 sm:mt-0 space-x-4 text-lg text-center sm:text-right">
-            <Link href="/about" className="hover:underline">About</Link>
-            <Link href="/architecture" className="hover:underline">Architecture</Link>
-            <Link href="/developing" className="hover:underline">Developing</Link>
-            <Link href="/principal-designer" className="hover:underline">Principal Designer</Link>
-            <Link href="/projects" className="hover:underline">Projects</Link>
-            <Link href="/contact" className="hover:underline">Contact</Link>
-          </nav>
-        </div>
+      <header className="flex flex-col md:flex-row items-center justify-between p-6 bg-[#7994a0] text-white">
+        <div className="text-2xl font-semibold mb-4 md:mb-0">Kura Architects</div>
+        <nav className="space-x-6 text-lg">
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/about" className="hover:underline">About</Link>
+          <Link href="/architecture" className="hover:underline">Architecture</Link>
+          <Link href="/developing" className="hover:underline">Developing</Link>
+          <Link href="/principal-designer" className="hover:underline">Principal Designer</Link>
+          <Link href="/projects" className="hover:underline">Projects</Link>
+          <Link href="/contact" className="hover:underline">Contact</Link>
+        </nav>
       </header>
 
-      {/* Contact Info */}
-      <section className="px-6 py-12 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="max-w-2xl mx-auto"
-        >
-          <p className="text-lg mb-2">Email: <a href="mailto:mail@kura-architects.co.uk" className="text-[#7994a0] underline">mail@kura-architects.co.uk</a></p>
-          <p className="text-lg mb-2">Phone: <a href="tel:+447811331210" className="text-[#7994a0] underline">+44 (0)78 11 33 12 10</a></p>
-          <p className="text-lg">Studio Address: Rowans | Wellington Road | B15 2ES</p>
-        </motion.div>
-      </section>
+      {/* Contact Content */}
+      <main className="flex-grow px-6 py-16 text-center">
+        <h1 className="text-3xl font-semibold mb-6">Contact Us</h1>
+        <p className="max-w-xl mx-auto text-lg mb-10">
+          We'd love to hear about your project. Please fill out the form below or get in touch directly.
+        </p>
 
-      {/* Contact Form */}
-      <section className="px-6 py-12 bg-gray-50">
-        <div className="max-w-xl mx-auto">
-          <form className="grid gap-6">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="border border-gray-300 p-3 rounded"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="border border-gray-300 p-3 rounded"
-              required
-            />
-            <textarea
-              rows="5"
-              placeholder="Your Message"
-              className="border border-gray-300 p-3 rounded"
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#7994a0] text-white py-3 px-6 rounded hover:bg-[#5f7889]"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
+        <form className="max-w-2xl mx-auto text-left space-y-6">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="name">Name</label>
+            <input type="text" id="name" className="w-full border border-gray-300 rounded-md p-3" required />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">Email</label>
+            <input type="email" id="email" className="w-full border border-gray-300 rounded-md p-3" required />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="message">Message</label>
+            <textarea id="message" rows="5" className="w-full border border-gray-300 rounded-md p-3" required></textarea>
+          </div>
+          <button type="submit" className="bg-[#7994a0] text-white px-6 py-3 rounded-md hover:bg-[#5c7b8a]">
+            Send Message
+          </button>
+        </form>
+      </main>
 
       {/* Footer */}
-      <footer className="p-6 bg-[#7994a0] text-white text-center text-sm">
+      <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
         &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
       </footer>
-    </main>
+    </div>
   );
 }
