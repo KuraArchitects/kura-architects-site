@@ -1,78 +1,109 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("Sending...");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-
-    if (res.ok) setSubmitted(true);
+      if (res.ok) {
+        setStatus("Message sent!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Failed to send. Please try again.");
+      }
+    } catch (err) {
+      setStatus("Error sending message.");
+    }
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans">
+    <main className="min-h-screen flex flex-col bg-white text-gray-800 font-sans">
       {/* Header */}
-      <header className="flex flex-col md:flex-row items-center justify-between px-6 py-4 bg-[#7994a0] text-white">
-        <div className="text-2xl font-semibold mb-4 md:mb-0">Kura Architects</div>
-        <nav className="space-x-4 text-sm">
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/about" className="hover:underline">About</Link>
-          <Link href="/architecture" className="hover:underline">Architecture</Link>
-          <Link href="/developing" className="hover:underline">Developing</Link>
-          <Link href="/principal-designer" className="hover:underline">Principal Designer</Link>
-          <Link href="/projects" className="hover:underline">Projects</Link>
-          <Link href="/contact" className="hover:underline">Contact</Link>
+      <header className="flex items-center justify-between p-6 bg-[#7994a0]">
+        <a href="/">
+          <Image src="/Logo.png" alt="Kura Architects" width={220} height={60} />
+        </a>
+        <nav className="space-x-6 text-white text-lg hidden md:block">
+          <a href="/about" className="hover:underline">About</a>
+          <a href="/architecture" className="hover:underline">Architecture</a>
+          <a href="/developing" className="hover:underline">Developing</a>
+          <a href="/principal-designer" className="hover:underline">Principal Designer</a>
+          <a href="/projects" className="hover:underline">Projects</a>
+          <a href="/contact" className="hover:underline font-semibold">Contact</a>
         </nav>
       </header>
 
-      {/* Content */}
-      <main className="flex-grow px-6 py-16 max-w-xl mx-auto text-center">
-        <h1 className="text-3xl font-semibold mb-6">Contact Us</h1>
-        <p className="mb-10 text-gray-600">
-          We’d love to hear from you. Please get in touch through the form below or get in touch directly.
-        </p>
-
-        {!submitted ? (
-          <form className="space-y-6 text-left" onSubmit={handleSubmit}>
-            <div>
-              <label className="block mb-1 font-medium">Name</label>
-              <input type="text" name="name" required className="w-full border border-gray-300 rounded px-3 py-2" onChange={handleChange} />
-            </div>
-            <div>
-              <label className="block mb-1 font-medium">Email</label>
-              <input type="email" name="email" required className="w-full border border-gray-300 rounded px-3 py-2" onChange={handleChange} />
-            </div>
-            <div>
-              <label className="block mb-1 font-medium">Message</label>
-              <textarea name="message" rows="4" required className="w-full border border-gray-300 rounded px-3 py-2" onChange={handleChange}></textarea>
-            </div>
-            <button type="submit" className="bg-[#7994a0] text-white px-6 py-2 rounded hover:bg-[#67818d]">
+      {/* Contact Section */}
+      <section className="flex-grow px-6 py-16 bg-gray-50 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
+          <p className="max-w-xl mx-auto text-lg mb-10">
+            For all enquiries, project consultations or just to say hello — please complete the form below or email us at <a href="mailto:mail@kura-architects.co.uk" className="text-blue-600">mail@kura-architects.co.uk</a>.
+          </p>
+          <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6 text-left">
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              required
+              className="w-full border border-gray-300 rounded px-4 py-2"
+            />
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              required
+              className="w-full border border-gray-300 rounded px-4 py-2"
+            />
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Your Message"
+              required
+              className="w-full border border-gray-300 rounded px-4 py-2 h-32"
+            />
+            <button
+              type="submit"
+              className="bg-[#7994a0] text-white px-6 py-2 rounded hover:bg-[#5e7681]"
+            >
               Send Message
             </button>
+            {status && <p className="text-sm text-gray-600 mt-2">{status}</p>}
           </form>
-        ) : (
-          <p className="text-green-600 text-lg">Thank you! Your message has been sent.</p>
-        )}
-      </main>
+        </motion.div>
+      </section>
 
       {/* Footer */}
-      <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
+      <footer className="p-6 bg-[#7994a0] text-white text-center text-sm mt-auto">
         &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
       </footer>
-    </div>
+    </main>
   );
 }
