@@ -11,9 +11,6 @@ export default function Page() {
           This section is currently being updated. Please check back soon or <a href="/contact" className="text-[#7994a0] underline">get in touch</a> for more information.
         </h1>
       </section>
-      <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
-        &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
-      </footer>
     </div>
   );
 }
