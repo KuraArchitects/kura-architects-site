@@ -39,7 +39,7 @@ export default function ContactPage() {
       {/* Header */}
       <header className="flex items-center justify-between p-6 bg-[#7994a0]">
         <a href="/">
-          <Image src="/Logo.png" alt="Kura Architects" width={220} height={60} />
+          <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
         </a>
         <nav className="space-x-6 text-white text-lg hidden md:block">
           <a href="/about" className="hover:underline">About</a>
