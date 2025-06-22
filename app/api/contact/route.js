@@ -1,28 +1,44 @@
 import nodemailer from 'nodemailer';
 
-export async function POST(request) {
-  const { name, email, message } = await request.json();
-
-  const transporter = nodemailer.createTransport({
-    host: 'mail.messagingengine.com',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'mail@kura-architects.co.uk',
-      pass: process.env.EMAIL_PASS, // store securely in Vercel ENV
-    },
-  });
-
+export async function POST(req) {
   try {
-    await transporter.sendMail({
-      from: '"Kura Architects Contact Form" <mail@kura-architects.co.uk>',
-      to: 'mail@kura-architects.co.uk',
-      subject: `New Contact Form Message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+    const { name, email, message } = await req.json();
+
+    if (!name || !email || !message) {
+      return new Response(JSON.stringify({ error: 'Missing fields' }), {
+        status: 400,
+      });
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.fastmail.com',
+      port: 587,
+      secure: false, // Use STARTTLS
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
     });
 
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
-  } catch (err) {
-    return new Response(JSON.stringify({ success: false, error: err.message }), { status: 500 });
+    const mailOptions = {
+      from: `"Kura Website Contact" <${process.env.SMTP_USER}>`,
+      to: 'mail@kura-architects.co.uk',
+      subject: `New Contact Form Submission from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+
+    console.log('Email sent:', info.messageId);
+
+    return new Response(JSON.stringify({ message: 'Email sent successfully' }), {
+      status: 200,
+    });
+  } catch (error) {
+    console.error('Error sending email:', error);
+
+    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+      status: 500,
+    });
   }
 }
