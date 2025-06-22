@@ -5,15 +5,13 @@ export async function POST(req) {
     const { name, email, message } = await req.json();
 
     if (!name || !email || !message) {
-      return new Response(JSON.stringify({ error: 'Missing fields' }), {
-        status: 400,
-      });
+      return new Response(JSON.stringify({ success: false, error: 'Missing fields' }), { status: 400 });
     }
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.fastmail.com',
-      port: 587,
-      secure: false, // Use STARTTLS
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: false, // STARTTLS
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -22,7 +20,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `"Kura Website Contact" <${process.env.SMTP_USER}>`,
-      to: 'mail@kura-architects.co.uk',
+      to: process.env.TO_EMAIL,
       subject: `New Contact Form Submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     };
@@ -30,15 +28,10 @@ export async function POST(req) {
     const info = await transporter.sendMail(mailOptions);
 
     console.log('Email sent:', info.messageId);
+    return new Response(JSON.stringify({ success: true, message: 'Email sent successfully' }), { status: 200 });
 
-    return new Response(JSON.stringify({ message: 'Email sent successfully' }), {
-      status: 200,
-    });
   } catch (error) {
     console.error('Error sending email:', error);
-
-    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
-      status: 500,
-    });
+    return new Response(JSON.stringify({ success: false, error: 'Failed to send email' }), { status: 500 });
   }
 }
