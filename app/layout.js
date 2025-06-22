@@ -1,24 +1,21 @@
 import './globals.css';
-import { Albert_Sans } from 'next/font/google';
-
-const albertSans = Albert_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'], // Adjust as needed
-  variable: '--font-albert',
-});
+import Header from './components/Header';
 
 export const metadata = {
-  title: 'Kura Architects',
-  description: 'Thoughtful / Smart / Reliable',
-  icons: {
-    icon: '/favicon.ico', // ✅ Your favicon file saved in /public
-  },
+  title: 'Kura Architects | Chartered Architects',
+  description: 'Experienced design-led architectural practice',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={albertSans.variable}>
-      <body className="font-sans bg-white text-gray-800">{children}</body>
+    <html lang="en">
+      <body className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
+          &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
+        </footer>
+      </body>
     </html>
   );
 }
