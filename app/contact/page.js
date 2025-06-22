@@ -7,17 +7,18 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen bg-white text-gray-800 font-sans">
 
       {/* Header */}
-      <header className="flex flex-col md:flex-row items-center justify-between p-6 bg-[#7994a0] text-white">
-        <div className="text-2xl font-semibold mb-4 md:mb-0">Kura Architects</div>
-        <nav className="space-x-6 text-lg">
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/about" className="hover:underline">About</Link>
-          <Link href="/architecture" className="hover:underline">Architecture</Link>
-          <Link href="/developing" className="hover:underline">Developing</Link>
-          <Link href="/principal-designer" className="hover:underline">Principal Designer</Link>
-          <Link href="/projects" className="hover:underline">Projects</Link>
-          <Link href="/contact" className="hover:underline">Contact</Link>
-        </nav>
+      <header className="p-6 bg-[#7994a0] text-white">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-between">
+          <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
+          <nav className="mt-4 sm:mt-0 space-x-4 text-lg text-center sm:text-right">
+            <Link href="/about" className="hover:underline">About</Link>
+            <Link href="/architecture" className="hover:underline">Architecture</Link>
+            <Link href="/developing" className="hover:underline">Developing</Link>
+            <Link href="/principal-designer" className="hover:underline">Principal Designer</Link>
+            <Link href="/projects" className="hover:underline">Projects</Link>
+            <Link href="/contact" className="hover:underline">Contact</Link>
+          </nav>
+        </div>
       </header>
 
       {/* Contact Content */}
