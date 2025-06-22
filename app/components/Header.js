@@ -1,11 +1,14 @@
 'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const pathname = usePathname();
 
-  const navLinks = [
+  const navItems = [
+    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/architecture', label: 'Architecture' },
     { href: '/developing', label: 'Developing' },
@@ -15,19 +18,27 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex flex-col md:flex-row items-center justify-between p-6 bg-white border-b border-gray-200">
-      <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
-      <nav className="mt-4 md:mt-0 space-x-6 text-sm md:text-lg">
-        {navLinks.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
+    <header className="flex flex-col md:flex-row items-center justify-between p-6 bg-[#7994a0] text-white">
+      <Link href="/">
+        <Image
+          src="/Logo.png"
+          alt="Kura Architects"
+          width={366}
+          height={100}
+          priority
+        />
+      </Link>
+      <nav className="flex flex-wrap justify-center gap-4 mt-4 md:mt-0 text-base font-medium">
+        {navItems.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
             className={`hover:underline ${
-              pathname === link.href ? 'text-[#7994a0] font-semibold' : 'text-gray-800'
+              pathname === href ? 'text-white underline' : ''
             }`}
           >
-            {link.label}
-          </a>
+            {label}
+          </Link>
         ))}
       </nav>
     </header>

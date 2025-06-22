@@ -36,21 +36,7 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen flex flex-col bg-white text-gray-800 font-sans">
-      {/* Header */}
-      <header className="flex items-center justify-between p-6 bg-[#7994a0]">
-        <a href="/">
-          <Image src="/Logo.png" alt="Kura Architects" width={366} height={100} />
-        </a>
-        <nav className="space-x-6 text-white text-lg hidden md:block">
-          <a href="/about" className="hover:underline">About</a>
-          <a href="/architecture" className="hover:underline">Architecture</a>
-          <a href="/developing" className="hover:underline">Developing</a>
-          <a href="/principal-designer" className="hover:underline">Principal Designer</a>
-          <a href="/projects" className="hover:underline">Projects</a>
-          <a href="/contact" className="hover:underline font-semibold">Contact</a>
-        </nav>
-      </header>
-
+      
       {/* Contact Section */}
       <section className="flex-grow px-6 py-16 bg-gray-50 text-center">
         <motion.div
@@ -100,10 +86,6 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-      {/* Footer */}
-      <footer className="p-6 bg-[#7994a0] text-white text-center text-sm mt-auto">
-        &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
-      </footer>
-    </main>
+      </main>
   );
 }
