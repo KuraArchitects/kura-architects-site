@@ -43,7 +43,7 @@ export default function ContactPage() {
       <main className="flex-grow px-6 py-16 max-w-xl mx-auto text-center">
         <h1 className="text-3xl font-semibold mb-6">Contact Us</h1>
         <p className="mb-10 text-gray-600">
-          We’d love to hear about your project. Please fill out the form below or get in touch directly.
+          We’d love to hear from you. Please get in touch through the form below or get in touch directly.
         </p>
 
         {!submitted ? (
