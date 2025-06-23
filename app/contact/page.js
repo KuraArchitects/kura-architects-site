@@ -29,6 +29,7 @@ export default function ContactPage() {
         setStatus("Failed to send. Please try again.");
       }
     } catch (err) {
+      console.error(err);
       setStatus("Error sending message.");
     }
   };
