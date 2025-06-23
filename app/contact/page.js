@@ -35,15 +35,12 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col bg-white text-gray-800 font-sans">
-      
-      {/* Contact Section */}
-      <section className="flex-grow px-6 py-16 bg-gray-50 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
+    <section className="flex-grow px-6 py-16 bg-gray-50 text-center text-gray-800">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
           <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
           <p className="max-w-xl mx-auto text-lg mb-10">
             For all enquiries, project consultations or just to say hello — please complete the form below or email us at <a href="mailto:mail@kura-architects.co.uk" className="text-blue-600">mail@kura-architects.co.uk</a>.
@@ -86,6 +83,5 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-      </main>
   );
 }
