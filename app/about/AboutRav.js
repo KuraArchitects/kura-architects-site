@@ -44,14 +44,14 @@ export default function AboutRav() {
             Before founding Kura Architects, Rav spent over a decade as a Director at a national practice, where he led large project teams and contributed to the systems that underpinned delivery at scale.  Today, he brings that same rigour to every project he takes on—just with closer proximity to the details that matter.
           </p>
           <br />
+
           <p className="text-lg text-gray-600">
             His clients come from varied backgrounds: homeowners with first-time ambitions, developers with programme pressures, or organisations with legacy constraints.  Rav understands each of these perspectives because he’s worked from all sides—including as a developer himself.  His own experiences navigating planning, funding, and construction timelines sharpen the empathy he brings to the design table.
-          </p>
           <br />
 
           <p className="text-lg text-gray-600"></p>
             He is a RIBA Chartered Architect and a registered Principal Designer under the Building Safety Act. But beyond titles and regulations, Rav believes professionalism means accountability without pretence.  His reputation has been built not just on knowledge, but on consistency—on doing the right thing, even when no one is looking.
-          </p>
+
           <br />
           <p className="text-lg text-gray-600"></p>
             Those who work with Rav often describe him as calm under pressure, clear in communication, and quietly relentless in getting things right.  He doesn’t overstate.  He doesn’t overpromise.  He simply ensures the work stands up—to scrutiny, to use, and to time.
