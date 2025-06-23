@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={albertSans.variable}>
       <body className="flex flex-col min-h-screen font-sans">
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex flex-col flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
