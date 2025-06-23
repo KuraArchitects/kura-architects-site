@@ -4,10 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function Page() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-gray-800 font-sans">
-
-          {/* Hero Section */}
-        <section className="h-[85vh] flex flex-col justify-center items-center bg-gray-100 text-center">
+        <section className="flex-grow flex flex-col justify-center items-center text-center px-6 py-16 bg-gray-100 text-gray-800">
           <motion.h1
             className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-3"
             initial="hidden"
@@ -32,8 +29,7 @@ export default function Page() {
                 {word}
               </motion.span>
             ))}
-          </motion.
-          h1>
+          </motion.h1>
           <motion.p
             className="text-lg md:text-xl max-w-2xl"
             initial={{ opacity: 0 }}
@@ -43,7 +39,5 @@ export default function Page() {
             Guiding clients through every stage of their project with clarity, rigour and attention to detail.
           </motion.p>    
       </section>
-
-    </div>
   );
 }
