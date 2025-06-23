@@ -1,5 +1,14 @@
 import './globals.css';
 import Header from './components/Header';
+import Header from './components/Footer';
+import { Albert_Sans } from 'next/font/google';
+
+const albertSans = Albert_Sans({
+  subsets: ['latin'],
+  weight: '500',
+  variable: '--font-albert-sans',
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Kura Architects | Chartered Architects',
@@ -8,13 +17,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen">
+    <html lang="en" className={albertSans.variable}>
+      <body className="flex flex-col min-h-screen font-sans">
         <Header />
         <main className="flex-grow">{children}</main>
-        <footer className="mt-auto p-6 bg-[#7994a0] text-white text-center text-sm">
-          &copy; {new Date().getFullYear()} Kura Architects Ltd. All rights reserved.
-        </footer>
+        <Footer />
       </body>
     </html>
   );

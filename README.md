@@ -14,11 +14,17 @@ pnpm dev
 bun dev
 ```
 
+If you do not already have a Tailwind CSS configuration file, generate one with:
+
+```bash
+npx tailwindcss init
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Albert Sans](https://fonts.google.com/specimen/Albert+Sans) at the Medium (500) weight.
 
 ## Learn More
 
@@ -35,4 +41,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-Thank you! 
+## Environment Variables
+
+The contact form API uses environment variables defined in a `.env.local` file. Provide values for the following keys:
+
+```bash
+SMTP_HOST=smtp.fastmail.com
+SMTP_PORT=587
+SMTP_USER=mail@kura-architects.co.uk
+SMTP_PASS=2z7n7x4j3w8b8j5x
+TO_EMAIL=mail@kura-architects.co.uk
+```
+
+These variables configure the SMTP server used to send form submissions.
+
+Thank you!
