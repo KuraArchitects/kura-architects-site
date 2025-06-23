@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
