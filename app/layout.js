@@ -1,6 +1,6 @@
 import './globals.css';
 import Header from './components/Header';
-import Header from './components/Footer';
+import Footer from './components/Footer';
 import { Albert_Sans } from 'next/font/google';
 
 const albertSans = Albert_Sans({
