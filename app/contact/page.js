@@ -41,7 +41,7 @@ export default function ContactPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-          <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
+          <h1 className="text-3xl font-semibold mb-6">Get in Touch</h1>
           <p className="max-w-xl mx-auto text-lg mb-10">
             For all enquiries, project consultations or just to say hello — please complete the form below or email us at <a href="mailto:mail@kura-architects.co.uk" className="text-blue-600">mail@kura-architects.co.uk</a>.
           </p>

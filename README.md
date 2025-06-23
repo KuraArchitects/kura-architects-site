@@ -49,7 +49,6 @@ The contact form API uses environment variables defined in a `.env.local` file. 
 SMTP_HOST=smtp.fastmail.com
 SMTP_PORT=587
 SMTP_USER=mail@kura-architects.co.uk
-SMTP_PASS=2z7n7x4j3w8b8j5x
 TO_EMAIL=mail@kura-architects.co.uk
 ```
 
