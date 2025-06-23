@@ -25,7 +25,7 @@ export default function AboutRav() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
+          transition={{ duration: 1.2, ease: 'easeOut', delay: 0.4 }}
           viewport={{ once: true }}
           className="space-y-6 text-left"
         >
@@ -36,21 +36,23 @@ export default function AboutRav() {
             Thoughtful. Smart. Reliable.
           </p>
           <p>
-            Rav Kumar is an architect who leads with clarity and delivers with conviction. Over a 25-year career, he’s shaped everything from homes and heritage refurbishments to city-centre developments and public buildings. What sets him apart isn’t just technical competence or design quality—it’s his ability to make the process feel grounded, methodical, and human.
+            Rav Kumar is an architect who leads with clarity and delivers with conviction.  Over a 25-year career, he’s shaped everything from homes and heritage refurbishments to city-centre developments and public buildings.  As well a striving in technical competence and design quality — he aims to always make the process feel grounded, methodical, and human.
 
-            Before founding Kura Architects, Rav spent over a decade as a Director at a national practice, where he led large project teams and contributed to the systems that underpinned delivery at scale. Today, he brings that same rigour to every project he takes on—just with closer proximity to the details that matter.
+          <br />
+            Before founding Kura Architects, Rav spent over a decade as a Director at a national practice, where he led large project teams and contributed to the systems that underpinned delivery at scale.  Today, he brings that same rigour to every project he takes on—just with closer proximity to the details that matter.
 
-            His clients come from varied backgrounds: homeowners with first-time ambitions, developers with programme pressures, or organisations with legacy constraints. Rav understands each of these perspectives because he’s worked from all sides—including as a developer himself. His own experiences navigating planning, funding, and construction timelines sharpen the empathy he brings to the design table.
+          <br />
+            His clients come from varied backgrounds: homeowners with first-time ambitions, developers with programme pressures, or organisations with legacy constraints.  Rav understands each of these perspectives because he’s worked from all sides—including as a developer himself.  His own experiences navigating planning, funding, and construction timelines sharpen the empathy he brings to the design table.
 
-            He is a RIBA Chartered Architect and a registered Principal Designer under the Building Safety Act. But beyond titles and regulations, Rav believes professionalism means accountability without pretence. His reputation has been built not just on knowledge, but on consistency—on doing the right thing, even when no one is looking.
+          <br />
+            He is a RIBA Chartered Architect and a registered Principal Designer under the Building Safety Act. But beyond titles and regulations, Rav believes professionalism means accountability without pretence.  His reputation has been built not just on knowledge, but on consistency—on doing the right thing, even when no one is looking.
 
-            Those who work with Rav often describe him as calm under pressure, clear in communication, and quietly relentless in getting things right. He doesn’t overstate. He doesn’t overpromise. He simply ensures the work stands up—to scrutiny, to use, and to time.
+          <br />
+            Those who work with Rav often describe him as calm under pressure, clear in communication, and quietly relentless in getting things right.  He doesn’t overstate.  He doesn’t overpromise.  He simply ensures the work stands up—to scrutiny, to use, and to time.
           </p>
 
           <blockquote className="mt-6 border-l-4 pl-4 text-gray-700 italic">
-            Good architecture, with  
-            <br />
-            a process clients can trust,
+            Good architecture with a process clients can trust,          
             <br />
             and buildings that endure.
           </blockquote>
