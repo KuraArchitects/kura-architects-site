@@ -35,51 +35,22 @@ export default function AboutRav() {
           <p className="text-lg text-gray-600 italic">
             Thoughtful. Smart. Reliable.
           </p>
-
-          <h2 className="border-l-4 border-[#7994a0] pl-4 text-xl font-medium">
-            Chartered Architect. Principal Designer. Calmly in control.
-          </h2>
           <p>
-            Rav Kumar is a <strong>RIBA Chartered Architect</strong> and
-            <strong> accredited Principal Designer</strong>, bringing clarity, care, and calm to the design process.
-            With over 25 years in practice, he has built a reputation for being precise in his thinking, practical in his advice, and dependable in delivery.
-          </p>
+            Rav Kumar is an architect who leads with clarity and delivers with conviction. Over a 25-year career, he’s shaped everything from homes and heritage refurbishments to city-centre developments and public buildings. What sets him apart isn’t just technical competence or design quality—it’s his ability to make the process feel grounded, methodical, and human.
 
-          <h2 className="border-l-4 border-[#7994a0] pl-4 text-xl font-medium">
-            A background rooted in leadership and delivery
-          </h2>
-          <p>
-            Rav’s career spans private homes, education, civic buildings, and heritage sites.
-            He was formerly a Director at a national architecture practice, leading high-profile teams and projects across the UK.
-          </p>
+            Before founding Kura Architects, Rav spent over a decade as a Director at a national practice, where he led large project teams and contributed to the systems that underpinned delivery at scale. Today, he brings that same rigour to every project he takes on—just with closer proximity to the details that matter.
 
-          <h2 className="border-l-4 border-[#7994a0] pl-4 text-xl font-medium">
-            Practice ethos: rigour at every scale
-          </h2>
-          <p>
-            Through Kura Architects, Rav brings <strong>large-practice standards</strong> to design that remains
-            <strong> personal, purposeful, and reliable</strong>. His work is underpinned by rigorous quality assurance and informed leadership.
-          </p>
+            His clients come from varied backgrounds: homeowners with first-time ambitions, developers with programme pressures, or organisations with legacy constraints. Rav understands each of these perspectives because he’s worked from all sides—including as a developer himself. His own experiences navigating planning, funding, and construction timelines sharpen the empathy he brings to the design table.
 
-          <h2 className="border-l-4 border-[#7994a0] pl-4 text-xl font-medium">
-            A developer’s perspective, not just an architect’s
-          </h2>
-          <p>
-            Having delivered his own schemes—including the redevelopment of a Grade II listed property—Rav understands
-            the pressures clients face. This experience sharpens his empathy, structure, and foresight.
-          </p>
+            He is a RIBA Chartered Architect and a registered Principal Designer under the Building Safety Act. But beyond titles and regulations, Rav believes professionalism means accountability without pretence. His reputation has been built not just on knowledge, but on consistency—on doing the right thing, even when no one is looking.
 
-          <h2 className="border-l-4 border-[#7994a0] pl-4 text-xl font-medium">
-            How he works: clear thinking, dependable process
-          </h2>
-          <p>
-            Whether resolving complex challenges or guiding new clients, Rav’s methodical, intelligent approach builds trust at every stage.
+            Those who work with Rav often describe him as calm under pressure, clear in communication, and quietly relentless in getting things right. He doesn’t overstate. He doesn’t overpromise. He simply ensures the work stands up—to scrutiny, to use, and to time.
           </p>
 
           <blockquote className="mt-6 border-l-4 pl-4 text-gray-700 italic">
-            Not just good architecture—
+            Good architecture, with  
             <br />
-            but a process clients can trust,
+            a process clients can trust,
             <br />
             and buildings that endure.
           </blockquote>
