@@ -20,7 +20,7 @@ export default function PrincipalDesigner() {
           width={1200}
           height={675}
           sizes="100vw"
-          className="w-full h-auto object-contain rounded-lg shadow-md"
+          className="w-full h-auto object-contain rounded-lg"
         />
       </motion.div>
 
