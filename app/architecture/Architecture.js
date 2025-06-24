@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import content from './content'
+import sections from './content'
 
 export default function Architecture() {
   return (
     <section className="bg-gray-50 text-gray-800 py-16 px-4 md:px-12 space-y-16">
-      {content.sections.map((sec, idx) => (
+      {sections.map((sec) => (
         <div key={sec.heading} className="max-w-3xl mx-auto space-y-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

@@ -1,6 +1,6 @@
 const sections = [
   {
-    image: '/Projects/Project1a.jpg',
+    image: '/images/Architecture1.jpg',
     imageAlt: 'Project view',
     heading: 'Designing with Purpose. Delivering with Certainty.',
     paragraphs: [
@@ -10,7 +10,7 @@ const sections = [
     ],
   },
   {
-    image: '/Projects/Project1b.jpg',
+    image: '/images/Architecture2.jpg',
     imageAlt: 'Process sketch',
     heading: 'Architecture Grounded in Process and Value',
     paragraphs: [
@@ -23,7 +23,7 @@ const sections = [
     ],
   },
   {
-    image: '/Projects/Project1c.jpg',
+    image: '/images/Architecture3.jpg',
     imageAlt: 'Construction detail',
     heading: 'Practical, Professional and Adaptable',
     paragraphs: [
