@@ -12,13 +12,15 @@ export default function PrincipalDesigner() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: 'easeOut' }}
         viewport={{ once: true }}
-        className="relative w-full h-64 md:h-96"
+        className="relative max-w-3xl mx-auto w-full"
       >
         <Image
           src={content.image}
-          alt="Principal Designer"
-          fill
-          className="object-cover rounded-lg shadow-md"
+          alt={content.imageAlt}
+          width={1200}
+          height={675}
+          sizes="100vw"
+          className="w-full h-auto object-contain rounded-lg shadow-md"
         />
       </motion.div>
 
