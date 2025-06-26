@@ -14,14 +14,12 @@ export default function Architecture() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: 'easeOut' }}
             viewport={{ once: true }}
-            className="relative max-w-3xl mx-auto w-full"
+            className="relative max-w-3xl mx-full w-auto overflow-hidden shadow-md"
           >
             {sec.video ? (
               <video
                 src={sec.video}
-                width={1600}
-                height={800}
-                className="w-full h-auto object-cover rounded-lg shadow-md"
+                className="w-full aspect-video object-cover"
                 muted
                 loop
                 autoPlay
@@ -31,10 +29,10 @@ export default function Architecture() {
               <Image
                 src={sec.image}
                 alt={sec.imageAlt}
-                width={1600}
-                height={800}
+                width={1920}
+                height={1080}
                 sizes="100vw"
-                className="w-full h-auto object-cover rounded-lg shadow-md"
+                className="w-full aspect-video object-cover"
               />
             )}
           </motion.div>
