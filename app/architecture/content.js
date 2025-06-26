@@ -1,6 +1,6 @@
 const sections = [
   {
-    image: '/video/Architecture1.mp4',
+    video: '/videos/Architecture1.mp4',
     imageAlt: 'Project view',
     heading: 'Designing with Purpose. Delivering with Certainty.',
     paragraphs: [

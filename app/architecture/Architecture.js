@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Video from 'next/video'
 import sections from './content'
 
 export default function Architecture() {
@@ -17,16 +16,27 @@ export default function Architecture() {
             viewport={{ once: true }}
             className="relative max-w-3xl mx-auto w-full"
           >
-            <Video
-              src={sec.video}
-              width={1600}
-              height={800}
-              className="w-full h-auto object-cover rounded-lg shadow-md"
-              muted
-              loop
-              autoPlay
-              playsInline
+            {sec.video ? (
+              <video
+                src={sec.video}
+                width={1600}
+                height={800}
+                className="w-full h-auto object-cover rounded-lg shadow-md"
+                muted
+                loop
+                autoPlay
+                playsInline
               />
+            ) : (
+              <Image
+                src={sec.image}
+                alt={sec.imageAlt}
+                width={1600}
+                height={800}
+                sizes="100vw"
+                className="w-full h-auto object-cover rounded-lg shadow-md"
+              />
+            )}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
