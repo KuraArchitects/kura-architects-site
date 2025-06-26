@@ -43,15 +43,25 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Environment Variables
 
-The contact form API uses environment variables defined in a `.env.local` file. Provide values for the following keys:
+The contact form API uses environment variables defined in a `.env.local` file.
+Copy the provided `.env.example` file and fill in the values for your
+environment:
+
+cp .env.example .env.local
+```
+
+Your `.env.local` file should define the following keys:
 
 ```bash
-SMTP_HOST=smtp.fastmail.com
-SMTP_PORT=587
-SMTP_USER=mail@kura-architects.co.uk
-TO_EMAIL=mail@kura-architects.co.uk
-```
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+TO_EMAIL=
 
 These variables configure the SMTP server used to send form submissions.
 
 Thank you!
+
+## License
+
+This project is released under the [MIT License](LICENSE).
