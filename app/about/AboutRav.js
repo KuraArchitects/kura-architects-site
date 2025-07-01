@@ -12,7 +12,7 @@ export default function AboutRav() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="relative w-full h-[950px] md:h-[340px]"
+          className="relative w-full max-w-xs mx-auto aspect-[3/4] md:max-w-full md:aspect-auto md:h-[340px]"
         >
           <Image
             src="/images/rav-portrait.jpg"
