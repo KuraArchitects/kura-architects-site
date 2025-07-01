@@ -6,7 +6,7 @@ export default function Page() {
   return (
         <section className="flex-grow flex flex-col justify-center items-center text-center px-6 py-16 bg-gray-100 text-gray-800">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-3"
+            className="text-4xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-x-6"
             initial="hidden"
             animate="visible"
             variants={{
