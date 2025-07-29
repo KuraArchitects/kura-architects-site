@@ -30,31 +30,34 @@ export default function AboutRav() {
           className="space-y-6 text-left"
         >
           <h1 className="text-3xl font-semibold text-center md:text-left mb-2">
-            About Rav Kumar
+            About Kura Architects
           </h1>
-          <p className="text-gray-600 italic">
-            Thoughtful. Smart. Reliable.
+          <p className="text-gray-600 italic">Thoughtful. Smart. Reliable.</p>
+          <p className="text-gray-600">
+            Kura Architects is a design-led practice based in the West Midlands, working across residential, heritage and small-scale development projects. We create architecture that is measured, enduring and responsive — shaped by context, built with purpose, and designed to serve the people who inhabit it.
           </p>
           <p className="text-gray-600">
-            Rav Kumar is an architect who leads with clarity and delivers with conviction.  Over a 25-year career, he’s shaped everything from homes and heritage refurbishments to city-centre developments and public buildings.  As well a striving in technical competence and design quality — he aims to always make the process feel grounded, methodical, and human.
+            Our name draws from the Japanese concept of the kura — a traditional storehouse built with clarity, restraint, honest materiality and longevity — an approach that underpins our work: carefully considered, technically rigorous, and crafted to protect what matters.
           </p>
           <p className="text-gray-600">
-            Before founding <strong>Kura Architects</strong>, Rav spent over a decade as a Director at a national practice, where he led large project teams and contributed to the systems that underpinned delivery at scale.  Today, he brings that same rigour to every project he takes on—just with closer proximity to the details that matter.
+            We listen closely, work intelligently, and communicate without jargon. Every project is grounded in the specifics of site and brief, resolved with care, and delivered with consistency. We remain closely involved throughout construction, ensuring that the original intent is realised in built form with integrity.
           </p>
           <p className="text-gray-600">
-            His clients come from varied backgrounds: homeowners with first-time ambitions, developers with programme pressures, or organisations with legacy constraints.  Rav understands each of these perspectives because he’s worked from all sides—including as a developer himself.  His own experiences navigating planning, funding, and construction timelines sharpen the empathy he brings to the design table.
+            With over 25 years’ experience, we bring a calm, assured presence to the process. Our clients include homeowners, developers and commercial end-users — people who value reliability, clear thinking and design that stands the test of time. At every stage, our work is thoughtful in its approach, smart in its resolution, and reliable in its delivery.
+          </p>
+          <h2 className="text-2xl font-semibold mt-8">Profile &ndash; Rav Kumar</h2>
+          <p className="text-gray-600">
+            Rav Kumar is an architect with over 25 years of experience designing and delivering residential, heritage and mixed-use schemes across the UK.
           </p>
           <p className="text-gray-600">
-            He is a <strong>RIBA Chartered Architect</strong> and a registered <strong>Principal Designer</strong> under the Building Safety Act. But beyond titles and regulations, Rav believes professionalism means accountability without pretence.  His reputation has been built not just on knowledge, but on consistency—on doing the right thing, even when no one is looking.
+            He began his career at Associated Architects, where he spent 13 years developing a broad design portfolio, before joining Corstorphine &amp; Wright to establish and lead their Birmingham Studio. Over a decade there, he helped grow the practice significantly, working closely with commercial developers and delivering projects at scale.
           </p>
           <p className="text-gray-600">
-            Those who work with Rav often describe him as focused under pressure, clear in communication, and quietly relentless in getting things right.  He doesn’t overstate.  He doesn’t overpromise.  He simply ensures the work stands up—to scrutiny, to use, and to time.
+            Rav founded Kura Architects to return to a more meaningful kind of architecture — one that puts people first. Having built his own home and acted as a small-scale developer, he brings first-hand insight into the process of delivering homes from every angle: architectural, technical and financial.
           </p>
-          <blockquote className="mt-6 border-l-4 pl-4 text-gray-700 italic strong">
-            Good architecture with a process clients can trust,          
-            <br />
-            and buildings that endure.
-          </blockquote>
+          <p className="text-gray-600">
+            Pragmatic, reliable and quietly assured, Rav is known for his ability to balance strong design thinking with practical delivery. His approach is grounded, client-focused, and shaped by years of navigating both the drawing board and the building site.
+          </p>
         </motion.div>
       </div>
     </section>
